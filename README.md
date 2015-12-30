@@ -4,7 +4,7 @@
 
 bleeding magic TodoMVC for [Craftworks](http://craftworks.enspiral.com)
 
-still very much based on ["the business stack"](https://github.com/enspiral-craftworks/business-stack)
+still very much based on ["the business stack"](https://github.com/enspiral-craftworks/business-todomvc)
 
 ## stack
 
