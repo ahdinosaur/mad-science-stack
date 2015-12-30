@@ -2,7 +2,7 @@
 
 ** work in progress **
 
-bleeding magic stack for [Craftworks](http://craftworks.enspiral.com)
+cat magic stack for [Craftworks](http://craftworks.enspiral.com)
 
 still very much based on ["the business stack"](https://github.com/enspiral-craftworks/business-stack)
 
