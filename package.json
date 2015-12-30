@@ -1,7 +1,7 @@
 {
-  "name": "craftworks-todomvc",
+  "name": "mad-science-todomvc",
   "version": "0.0.0",
-  "description": "real-world production-quality TodoMVC example",
+  "description": "bleeding magic TodoMVC example",
   "main": "server",
   "scripts": {
     "postinstall": "npm run modules",
@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ahdinosaur/craftworks-todomvc.git"
+    "url": "git+https://github.com/enspiral-craftworks/mad-science-todomvc.git"
   },
   "keywords": [
     "todomvc",
@@ -43,9 +43,9 @@
   "author": "Mikey <michael.williams@enspiral.com> (http://dinosaur.is)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ahdinosaur/craftworks-todomvc/issues"
+    "url": "https://github.com/enspiral-craftworks/mad-science-todomvc/issues"
   },
-  "homepage": "https://github.com/ahdinosaur/craftworks-todomvc#readme",
+  "homepage": "https://github.com/enspiral-craftworks/mad-science-todomvc#readme",
   "engines": {
     "node": "^4.0.0",
     "npm": "^3.0.0"
