@@ -2,44 +2,21 @@ const { createStore, compose, applyMiddleware } = require('redux')
 const thunk = require('redux-thunk')
 const { createHistory } = require('history')
 
-const reducer = require('app/reducer')
-
-let storeEnhancers  = []
-let middleware = []
-
-middleware.push(thunk)
-
 if (process.env.NODE_ENV === 'development') {
   var logger = require('redux-logger')
-  var { persistState } = require('redux-devtools')
-  
-  var DevTools = require('app/dev/tools')
 }
 
-storeEnhancers.push(
-  applyMiddleware(...middleware)
-)
+const reducer = require('app/reducer')
+
+let appMiddleware = [ thunk ]
 
 if (process.env.NODE_ENV === 'development') {
-  storeEnhancers.push(
-    applyMiddleware(logger())
-  )
-  storeEnhancers.push(DevTools.instrument())
-
-  if (module.browser) {
-    storeEnhancers.push(persistState(
-      window.location.href.match(
-        /[?&]debug_session=([^&]+)\b/
-      )
-    ))
-  }
+  appMiddleware.push(logger())
 }
 
-const createEnhancedStore = compose(
-  ...storeEnhancers
-)(createStore)
-
-function finalCreateStore(initialState) {
+function finalCreateStore(client, initialState) {
+  const appStore = client.apply(null, appMiddleware)
+  const store = appStore(reducer, initialState)
 
   if (module.hot) {
     module.hot.accept('app/reducer', () => {
@@ -47,7 +24,7 @@ function finalCreateStore(initialState) {
     })
   }
 
-  return createEnhancedStore(reducer, initialState)
+  return store
 }
 
 module.exports = finalCreateStore

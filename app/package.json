@@ -1,15 +1,19 @@
 {
-  "browser": {
-    "./api.js": "./clients/index.js",
-    "./config.js": "./config-browser.js"
-  },
+  "name": "app",
+  "private": true,
+  "version": "0.0.0",
   "browserify": {
     "transform": [
-      ["cssify", { "modules": true } ],
       "babelify",
-      "envify",
-      ["evalify", { "files": [ "config-browser.js" ] } ],
+      "sheetify/transform",
       "bulkify"
     ]
+  },
+  "dependencies": {
+    "app": "file:../app",
+    "redux": "^3.0.5",
+    "redux-thunk": "^1.0.0",
+    "virtex-element": "^0.1.5",
+    "wayfarer": "^6.1.0"
   }
 }

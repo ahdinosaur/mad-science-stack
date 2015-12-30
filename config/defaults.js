@@ -1,10 +1,17 @@
-const { join } = require('path')
+const join = require('path').join
 const env = process.env
 const nodeEnv = env.NODE_ENV
 
 module.exports = {
   static: {
-    root: join(__dirname, '..', 'assets')
+    url: {
+      port: 5000,
+    },
+    root: join(__dirname, '..', 'build')
   },
-  port: env.PORT || 5000
+  api: {
+    url: {
+      port: 5001
+    }
+  }
 }

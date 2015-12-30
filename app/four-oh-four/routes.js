@@ -1,6 +1,12 @@
-const React = require('react')
-const { Route } = require('react-router')
+const el = require('virtex-element').default
+const createRouter = require('wayfarer')
 
-const FourOhFourContainer = require('./container')
+const component = require('./component')
 
-module.exports = <Route path="*" component={FourOhFourContainer} />
+const router = createRouter('/')
+
+router.on('/', function (params, props) {
+  return el(component, props)
+})
+
+module.exports = router

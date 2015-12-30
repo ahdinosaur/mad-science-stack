@@ -1,0 +1,9 @@
+{
+  "name": "api",
+  "private": true,
+  "version": "0.0.0",
+  "dependencies": {
+    "config": "file:../config",
+    "feathers": "^1.2.0"
+  }
+}

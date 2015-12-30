@@ -1,6 +1,12 @@
-const React = require('react')
-const { IndexRoute } = require('react-router')
+const el = require('virtex-element').default
+const createRouter = require('wayfarer')
 
-const LandingContainer = require('./container')
+const component = require('./components/landing')
 
-module.exports = <IndexRoute component={LandingContainer} />
+const router = createRouter('/')
+
+router.on('/', function (params, props) {
+  return el(component, props)
+})
+
+module.exports = router
