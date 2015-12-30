@@ -1,7 +1,7 @@
 {
-  "name": "mad-science-todomvc",
+  "name": "mad-science-stack",
   "version": "0.0.0",
-  "description": "bleeding magic TodoMVC example",
+  "description": "bleeding magic stack example",
   "main": "server",
   "scripts": {
     "postinstall": "npm run modules",
@@ -25,10 +25,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/enspiral-craftworks/mad-science-todomvc.git"
+    "url": "git+https://github.com/enspiral-craftworks/mad-science-stack.git"
   },
   "keywords": [
-    "todomvc",
+    "stack",
     "example",
     "react",
     "redux",
@@ -43,9 +43,9 @@
   "author": "Mikey <michael.williams@enspiral.com> (http://dinosaur.is)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/enspiral-craftworks/mad-science-todomvc/issues"
+    "url": "https://github.com/enspiral-craftworks/mad-science-stack/issues"
   },
-  "homepage": "https://github.com/enspiral-craftworks/mad-science-todomvc#readme",
+  "homepage": "https://github.com/enspiral-craftworks/mad-science-stack#readme",
   "engines": {
     "node": "^4.0.0",
     "npm": "^3.0.0"

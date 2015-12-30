@@ -1,10 +1,10 @@
-# mad-science-todomvc
+# mad-science-stack
 
 ** work in progress **
 
-bleeding magic TodoMVC for [Craftworks](http://craftworks.enspiral.com)
+bleeding magic stack for [Craftworks](http://craftworks.enspiral.com)
 
-still very much based on ["the business stack"](https://github.com/enspiral-craftworks/business-todomvc)
+still very much based on ["the business stack"](https://github.com/enspiral-craftworks/business-stack)
 
 ## stack
 
