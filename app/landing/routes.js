@@ -1,4 +1,4 @@
-const el = require('virtex-element').default
+const el = require('vdux/element').default
 const createRouter = require('wayfarer')
 
 const component = require('./components/landing')

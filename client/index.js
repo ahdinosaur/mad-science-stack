@@ -1,9 +1,13 @@
-const vdux = require('vdux').default
-const client = require('vdux-preset-client').default
+const vdux = require('vdux/dom').default
 
-const createStore = require('app/store')
+const reducer = require('app/reducer')
+const middleware = require('app/middleware')
 const app = require('app')
 
-const store = createStore(client)
-
-vdux(store, app, document.body)
+vdux({
+  reducer,
+  middleware,
+  initialState: undefined,
+  app,
+  node: document.querySelector('main')
+})

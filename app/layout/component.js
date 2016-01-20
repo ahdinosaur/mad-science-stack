@@ -1,4 +1,4 @@
-const el = require('virtex-element').default
+const el = require('vdux/element').default
 
 module.exports = {
   render

@@ -82,7 +82,6 @@
     "client": "file:./client",
     "config": "file:./config",
     "cpx": "^1.2.1",
-    "cssify": "github:ahdinosaur/cssify",
     "envify": "^3.4.0",
     "linklocal": "^2.5.2",
     "npm-run-all": "^1.3.2",

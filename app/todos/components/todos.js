@@ -1,4 +1,4 @@
-var el = require('virtex-element').default
+var el = require('vdux/element').default
 
 module.exports = {
   render
