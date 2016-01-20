@@ -1,12 +1,11 @@
 const el = require('vdux/element').default
-const createRouter = require('wayfarer')
 
 const component = require('./components/landing')
 
-const router = createRouter('/')
+module.exports = routes
 
-router.on('/', function (params, props) {
-  return el(component, props)
-})
-
-module.exports = router
+function routes (route) {
+  return route('/', (params, state) => {
+    return el(component, state)
+  })
+}

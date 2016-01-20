@@ -14,6 +14,6 @@
     "redux": "^3.0.5",
     "redux-thunk": "^1.0.0",
     "vdux": "^2.0.0",
-    "wayfarer": "^6.1.0"
+    "sheet-router": "^1.0.0"
   }
 }
