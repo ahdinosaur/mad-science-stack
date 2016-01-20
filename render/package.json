@@ -1,10 +1,14 @@
 {
-  "name": "client",
+  "name": "render",
   "private": true,
   "version": "0.0.0",
+  "main": "main",
+  "browser": "browser",
   "dependencies": {
     "api": "file:../api",
+    "catch-links": "^2.0.0",
     "config": "file:../config",
+    "send-data": "^8.0.0",
     "vdux": "^2.0.0"
   }
 }

@@ -4,7 +4,7 @@ module.exports = App
 
 function App (state) {
   return routes(
-    state.url || '/',
+    state.url,
     state
   )
 } 

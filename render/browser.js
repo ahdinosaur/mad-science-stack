@@ -7,7 +7,7 @@ const app = require('app')
 vdux({
   reducer,
   middleware,
-  initialState: undefined,
+  initialState: window.__state,
   app,
   node: document.querySelector('main')
 })

@@ -3,15 +3,26 @@ const env = process.env
 const nodeEnv = env.NODE_ENV
 
 module.exports = {
+  render: {
+    url: {
+      protocol: 'http:',
+      hostname: 'localhost',
+      port: 5000,
+    }
+  },
   static: {
     url: {
-      port: 5000,
+      protocol: 'http:',
+      hostname: 'localhost',
+      port: 5001,
     },
     root: join(__dirname, '..', 'build')
   },
   api: {
     url: {
-      port: 5001
+      protocol: 'http:',
+      hostname: 'localhost',
+      port: 5002
     }
   }
 }
