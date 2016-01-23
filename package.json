@@ -15,7 +15,7 @@
     "pg:rm": "docker rm mad-science-postgres",
     "pg:logs": "docker logs mad-science-postgres",
     "test": "npm-run-all -p test:*",
-    "test:spec": "node spec",
+    "test:spec": "ava",
     "test:feature": "node features",
     "dev:assets": "cpx \"assets/**/*\" build -w",
     "dev:api": "node-dev ./api/cli",
@@ -30,6 +30,13 @@
     "prod:static": "node ./static/cli",
     "dev": "NODE_ENV=development npm-run-all -p dev:*",
     "prod": "NODE_ENV=production npm-run-all -s prod:*"
+  },
+  "ava": {
+    "files": [
+      "**/*.spec.js"
+    ],
+    "require": [
+    ]
   },
   "repository": {
     "type": "git",
@@ -59,7 +66,7 @@
     "npm": "^3.0.0"
   },
   "devDependencies": {
-    "ava": "^0.8.0",
+    "ava": "^0.10.0",
     "browserify-hmr": "^0.3.1",
     "cuke-tap": "^1.0.2",
     "glob": "^6.0.2",

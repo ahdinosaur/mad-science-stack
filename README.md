@@ -54,7 +54,7 @@ still very much based on ["the business stack"](https://github.com/enspiral-craf
 - client action store: [redux](http://redux.js.org)
 - client reducers: [redux-tcomb](https://github.com/gcanti/redux-tcomb)
 - client getters: [reselect](https://www.npmjs.com/package/reselect)
-- client router: [wayfarer](https://www.npmjs.com/package/wayfarer)
+- client router: [sheet-router](https://www.npmjs.com/package/sheet-router)
 - client viewmodel: [vdux](https://www.npmjs.com/package/vdux)
 - client views: [virtex-element](https://www.npmjs.com/package/virtex-element)
 - test specs: [ava](https://www.npmjs.com/package/ava)
