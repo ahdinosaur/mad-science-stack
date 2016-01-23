@@ -1,12 +1,13 @@
 const http = require('http')
 const Url = require('url')
 const vdux = require('vdux/string').default
+const h = require('vdux/element').default
 const sendHtml = require('send-data/html')
 const sendError = require('send-data/error')
 
 const reducer = require('app/reducer')
 const middleware = require('app/middleware')
-const app = require('app')
+const App = require('app')
 
 module.exports = {
   createServer
@@ -24,7 +25,7 @@ function createServer (config) {
       initialState: {
         url: req.url
       },
-      app
+      app: (state) => h(App, state)
     })
     .then(({ html, vtree, state }) => {
       const page = renderPage(html, state)

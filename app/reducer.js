@@ -10,6 +10,5 @@ module.exports = combineReducers({
   ...map(
     (module) => combineReducers(module.reducers),
     bulk(__dirname, '*/reducers/*.js')
-  ),
-  url: (state = '', action) => state
+  )
 })

@@ -1,14 +1,39 @@
-const el = require('vdux/element').default
+const h = require('vdux/element').default
 
 module.exports = {
   render
 }
 
-function render ({ props }) {
-  return el('div', [
-    el('h1', {
+function render ({ props, children }) {
+  return h('div', {}, [
+    h('h1', {
       textContent: 'TodoMVC'
-    },
-    el('div', props.children))
+    }),
+    renderNav({
+      items: [{
+        href: '/',
+        text: 'home'
+      }, {
+        href: '/todos',
+        text: 'todos'
+      }]
+    }),
+    h('div', {}, children)
+  ])
+}
+
+function renderNav (props) {
+  return h('ul', {}, props.items.map((item) => {
+    return renderNavItem(item)
+  }))
+}
+
+function renderNavItem (props) {
+  return h('a', {
+    href: props.href
+  }, [
+    h('li', {
+      textContent: props.text
+    })
   ])
 }

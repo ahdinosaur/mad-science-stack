@@ -6,7 +6,6 @@
   "browser": "browser",
   "dependencies": {
     "api": "file:../api",
-    "catch-links": "^2.0.0",
     "config": "file:../config",
     "send-data": "^8.0.0",
     "vdux": "^2.0.0"

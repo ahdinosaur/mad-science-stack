@@ -1,13 +1,13 @@
 const vdux = require('vdux/dom').default
+const h = require('vdux/element').default
 
 const reducer = require('app/reducer')
 const middleware = require('app/middleware')
-const app = require('app')
 
 vdux({
   reducer,
   middleware,
   initialState: window.__state,
-  app,
+  app: (state) => h(require('app'), state),
   node: document.querySelector('main')
 })

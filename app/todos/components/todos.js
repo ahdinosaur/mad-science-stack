@@ -1,4 +1,4 @@
-var el = require('vdux/element').default
+var h = require('vdux/element').default
 
 module.exports = {
   render
