@@ -37,6 +37,7 @@ function createServer (config) {
       sendHtml(req, res, page)
     })
     .catch((err) => {
+      console.error(err.stack)
       sendError(req, res, { body: err })
     })
   }
