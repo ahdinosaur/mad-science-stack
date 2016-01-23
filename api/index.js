@@ -1,23 +1,33 @@
+const http = require('http')
+const cors = require('cors')
 const feathers = require('feathers')
-const R = require('ramda')
+const hooks = require('feathers-hooks')
+const primus = require('feathers-primus')
+const join = require('path').join
 
-const services = require('app/services')
+const todosService = require('app/todos/service')
 
-module.exports = createServices
+module.exports = {
+  createServer
+}
 
-function createServices(config) {
+function createServer (config) {
   const app = feathers()
+    .use(cors())
+    .configure(hooks())
+    .configure(primus({
+      transformer: 'websockets'
+    }, (primus) => {
+      primus.save(join(__dirname, 'primus.js'))
+      primus.authorize((req, done) => {
+        done()
+      })
+    }))
+    .use('/todos', todosService)
 
-  useAll(app, services)
+  const server = http.createServer(app)
 
-  return app
+  app.setup(server)
+
+  return server
 }
-
-function useAll (app, services) {
-  return R.reduce((app, pair) => {
-    const name = pair[0]
-    const service = pair[1]
-    return app.use(`/${name}`, service)
-  }, app, R.toPairs(services))
-}
-

@@ -1,13 +1,5 @@
-module.exports = todos
+const { createReducer } = require('feathers-action')
 
-function todos (state = {}, action) {
-  switch (action.type) {
-    case 'CREATE_TODO':
-      return {
-        ...state,
-        [action.payload.id]: action.payload
-      }
-    default:
-      return state
-  }
-}
+const { Todos } = require('./models')
+
+module.exports = createReducer(Todos)

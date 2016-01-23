@@ -1,8 +1,8 @@
 require('babel-register')
 
 const config = require('config/cli')(process.argv, 'api')
-const createApi = require('./')
+const createServer = require('./').createServer
 
-const server = createApi(config.api)
+const server = createServer(config.api)
 
 server.listen(config.api.url.port)
