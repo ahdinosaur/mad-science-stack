@@ -16,7 +16,12 @@ module.exports = {
 function createServer (config) {
   const staticUrl = Url.format(config.static.url)
 
-  return http.createServer(handler)
+  const inject = config.render.livereload ?
+    require('inject-lr-script') : (res) => res
+
+  return http.createServer((req, res) => {
+    return handler(req, inject(res))
+  })
 
   function handler (req, res) {
     vdux({
