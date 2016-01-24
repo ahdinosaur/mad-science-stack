@@ -7,7 +7,9 @@ if (process.env.NODE_ENV === 'development') {
 let middleware = [ thunk ]
 
 if (process.env.NODE_ENV === 'development') {
-  middleware.push(logger())
+  if (process.browser) {
+    middleware.push(logger())
+  }
 }
 
 module.exports = middleware

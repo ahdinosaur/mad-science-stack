@@ -6,7 +6,8 @@
     "transform": [
       "babelify",
       "sheetify/transform",
-      "bulkify"
+      "bulkify",
+      "envify"
     ]
   },
   "dependencies": {
