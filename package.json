@@ -14,6 +14,8 @@
     "pg:stop": "docker stop mad-science-postgres",
     "pg:rm": "docker rm mad-science-postgres",
     "pg:logs": "docker logs mad-science-postgres",
+    "db:migrate": "cd api; npm run knex -- migrate:latest",
+    "gen:migration": "cd api; npm run knex -- migrate:make",
     "test": "npm-run-all -p test:*",
     "test:spec": "ava",
     "test:feature": "node features",

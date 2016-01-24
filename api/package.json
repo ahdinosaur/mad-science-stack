@@ -2,6 +2,9 @@
   "name": "api",
   "private": true,
   "version": "0.0.0",
+  "scripts": {
+    "knex": "knex"
+  },
   "dependencies": {
     "config": "file:../config",
     "cors": "^2.7.1",
