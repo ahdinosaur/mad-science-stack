@@ -6,5 +6,8 @@
     "transform-runtime",
     "transform-object-rest-spread",
     "transform-class-properties"
+  ],
+  "ignore": [
+    "**/api/primus.js"
   ]
 }
